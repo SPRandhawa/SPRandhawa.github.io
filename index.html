@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Randhawa Production - Official Remix Music Website</title>
+<meta name="description" content="Official website of Randhawa Production. Explore latest Punjabi remix songs, DJ mixes and watch on YouTube.">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        /* ===== BANNER ===== */
+      
+.banner {
+    width: 100%;
+    height: 410px;   /* change this to control visible size */
+    background-image: url("BANNER.jpeg"); /* PUT YOUR BANNER IMAGE */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+        /* ===== ROUND LOGO ===== */
+        .profile-logo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -80px;
+            border: 6px solid #111;
+            background: #000;
+        }
+
+        .profile-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+     .channel-title {
+    text-align: center;
+    margin: 120px auto 40px auto;
+    font-size: 42px;
+    font-weight: 900;
+    padding: 15px 30px;
+    display: inline-block;
+    border: 3px solid #ff0000;
+    border-radius: 15px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+        .about {
+            text-align: center;
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+        h6 {
+    font-size: 18px;      /* make bigger */
+    font-weight: bold;    /* make bold */
+    line-height: 1.6;     /* better spacing */
+}
+       .yt-link 
+       {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.yt-link:hover 
+{
+    color: #ff4444;
+    transform: translateX(3px);
+    transition: 0.3s;
+}
+.arrow {
+    display: inline-block;
+     margin-right: 10px; 
+    animation: moveArrow 1s infinite alternate;
+}
+
+@keyframes moveArrow {
+    from { transform: translateX(0px); }
+    to { transform: translateX(8px); }
+}
+
+        /* ===== SONG CARDS ===== */
+        .songs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #222;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            width: 280px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background: darkred;
+        }
+
+        /* ===== HEART BUTTON ===== */
+        .heart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .heart.active {
+            color: red;
+        }
+
+        /* ===== FAVORITES SECTION ===== */
+        #favoritesSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1f1f1f;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== BANNER ===== -->
+<div class="banner">
+    <div class="profile-logo">
+        <img src="LOGO.jpeg" alt="Channel Logo"> <!-- PUT YOUR SQUARE LOGO -->
+    </div>
+</div>
+
+<div style="text-align:center;">
+    <a href="https://youtube.com/@27RANDHAWA" target="_blank" style="text-decoration:none;">
+        <h1 class="channel-title">WELCOME TO RANDHAWA PRODUCTION</h1>
+    </a>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about">
+    <h2>About</h2>
+  <p>
+Welcome to my official music website — your ultimate destination for an immersive music experience.
+ Explore my latest songs, creative music projects, and curated playlists across pop, rock, classical, indie, and global beats, complete with fresh track breakdowns. 
+ Hit play, subscribe, and join our growing community of music lovers. Thank you all for visiting the channel — love you all ❤️ 
+  </p>
+<h6>
+<a href="https://youtube.com/@27RANDHAWA" target="_blank" class="yt-link">
+    <span class="arrow">👉     </span>    Visit my official YouTube channel.
+</a> for more amazing content.and Please Don't forget to subscribe and 
+    hit the bell icon on YouTube for instant updates on new releases! 🔔 
+</h6>
+</section>
+
+<!-- ===== SONGS ===== -->
+<section class="songs">
+
+    <div class="card" data-title="My First Song">
+        <span class="heart">❤</span>
+        <img src="273456.jpg" alt="Song Poster">
+        <h3>ARJAN VAILLY (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/qTAIaeCHhcc?si=TkdAJZapvoVQnHtX" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+
+    <div class="card" data-title="My Second Song">
+        <span class="heart">❤</span>
+        <img src="Capture.JPG" alt="Song Poster">
+        <h3>Sagar Di Vohti Punjabi Song (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/1YQ0e7HaTxA?si=g5G6vUNu3i-iZ1K7" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+ <div class="card" data-title="My Third Song">
+        <span class="heart">❤</span>
+        <img src="Web.jpg" alt="Song Poster">
+        <h3>NAINA SONG (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/tRQv29lq7F0?si=bg54ei9ky7Qlzbie" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My fourth Song">
+        <span class="heart">❤</span>
+        <img src="A.png" alt="Song Poster">
+        <h3>Hum Pyaar Hai Tumhare Song</h3>
+        <a class="btn" href="https://youtu.be/pZkrZ5_h3v4?si=KV5Sg4ekdysPC0ad" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Fifth Song">
+        <span class="heart">❤</span>
+        <img src="har.png" alt="Song Poster">
+        <h3>HAR HAR SHAMBHU (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/HN9LBu7VGK0?si=Qan3yV13fH0tOO6I" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My sixth Song">
+        <span class="heart">❤</span>
+        <img src="jogi (1).png" alt="Song Poster">
+        <h3>JOGI (DJ REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/a7pxnI7pOIo?si=_bh9MHKqlRzI8bVp" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Seventh Song">
+        <span class="heart">❤</span>
+        <img src="tutak.png" alt="Song Poster">
+        <h3>Tutak Tutak Tutiya</h3>
+        <a class="btn" href="https://youtu.be/0GnguRnkU8U?si=S9kt9C9cSKFqBY_P" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Eighth Song">
+        <span class="heart">❤</span>
+        <img src="sign.png" alt="Song Poster">
+        <h3>Sign To God x Cheques Song (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/5RI794EXUDU?si=OAB9ELDE7n4mRKi4" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My ninth Song">
+        <span class="heart">❤</span>
+        <img src="1.png" alt="Song Poster">
+        <h3>TAHNIYON TUTTE PHUL By Davinder Kohinoor</h3>
+        <a class="btn" href="https://youtu.be/Y5z3cEye4zw?si=yOh0wGJcRFgvMqfa" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Tenth Song">
+        <span class="heart">❤</span>
+        <img src="2.png" alt="Song Poster">
+        <h3>WE ROLLIN X DRIPPY (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/5PwzA0MPtl8?si=goXM2g1gBnTNeX4u" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+ <div class="card" data-title="My eleventh Song">
+        <span class="heart">❤</span>
+        <img src="4.png" alt="Song Poster">
+        <h3>SONA Punjabi Song (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/JGK6PT6lxqc?si=x7gU__0GRkPIMlKX" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Twelfth Song">
+        <span class="heart">❤</span>
+        <img src="7.png" alt="Song Poster">
+        <h3>PUNJABI SAD SONG (REMIX NEW)</h3>
+        <a class="btn" href="https://youtu.be/JxVtJukIfOQ?si=J233lV-NK0oI_Qpm" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Thirteenth Song">
+        <span class="heart">❤</span>
+        <img src="5.png" alt="Song Poster">
+        <h3>Aaja Tenu Sahan Te Dhaage (Diljit Dosanjh)</h3>
+        <a class="btn" href="https://youtu.be/-pz4T2gMQEI?si=uvK91QXd83zB4Qsy" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My Fourteenth Song">
+        <span class="heart">❤</span>
+        <img src="6.png" alt="Song Poster">
+        <h3>RAIL GADDI AAYI SONG (REMIX)</h3>
+        <a class="btn" href="https://youtu.be/c6Cnn2vfTRo?si=PXeqT7b9rFheaNtU" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My fifteenth Song">
+        <span class="heart">❤</span>
+        <img src="B.png" alt="Song Poster">
+        <h3>SAIYAARA (REMIX 2026)</h3>
+        <a class="btn" href="https://youtu.be/afy9X4Wg8Do?si=cW_yQ8dF96U8ctMV" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+    <div class="card" data-title="My sixteenth Song">
+        <span class="heart">❤</span>
+        <img src="s.jfif" alt="Song Poster">
+        <h3>SURJIT BINDRAKHIA</h3>
+        <a class="btn" href="https://youtu.be/AsyowB_HqMk?si=IRkJSSUNoCJTKpfs" target="_blank">
+            ▶ Watch on YouTube
+        </a>
+    </div>
+
+</section>
+
+<h2 style="text-align:center;">❤️ Favorite Songs</h2>
+<section id="favoritesSection"></section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>© 2026 RANDHAWA PRODUCTION | All Rights Reserved</p>
+
+    <div class="social-icons">
+        <a href="https://youtube.com/@27RANDHAWA" target="_blank">
+            <img src="you.png">
+        </a>
+
+        </a>
+    </div>
+</footer>
+
+<!-- ===== SCRIPT FOR FAVORITES ===== -->
+<script>
+    const hearts = document.querySelectorAll(".heart");
+    const favoritesSection = document.getElementById("favoritesSection");
+
+    let savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    function renderFavorites() {
+        favoritesSection.innerHTML = "";
+
+        if (savedFavorites.length === 0) {
+            favoritesSection.innerHTML = "<p style='opacity:0.7;'>No favorite songs yet ❤️</p>";
+            return;
+        }
+
+        savedFavorites.forEach(title => {
+            const originalCard = document.querySelector(`.card[data-title="${title}"]`);
+            if (originalCard) {
+                const clone = originalCard.cloneNode(true);
+                clone.querySelector(".heart").remove();
+                favoritesSection.appendChild(clone);
+            }
+        });
+    }
+
+    function updateStorage() {
+        localStorage.setItem("favorites", JSON.stringify(savedFavorites));
+    }
+
+    hearts.forEach(heart => {
+        const card = heart.parentElement;
+        const title = card.getAttribute("data-title");
+
+        if (savedFavorites.includes(title)) {
+            heart.classList.add("active");
+        }
+
+        heart.addEventListener("click", function () {
+            heart.classList.toggle("active");
+
+            if (heart.classList.contains("active")) {
+                if (!savedFavorites.includes(title)) {
+                    savedFavorites.push(title);
+                }
+            } else {
+                savedFavorites = savedFavorites.filter(item => item !== title);
+            }
+
+            updateStorage();
+            renderFavorites();
+        });
+    });
+
+    renderFavorites();
+</script>
+
+</body>
+</html>
