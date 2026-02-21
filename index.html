@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   
 <title>Randhawa Production | Punjabi Remix & DJ Music Official Website</title>
     <link rel="icon" type="image/png" href="fav.png">
     <link rel="canonical" href="https://sprandhawa.github.io/">
@@ -109,59 +109,66 @@
     from { transform: translateX(0px); }
     to { transform: translateX(8px); }
 }
+            /* ===== SONG CARDS ===== */
 
-        /* ===== SONG CARDS ===== */
-     /* ===== SONG CARDS ===== */
-.songs {
-    display: grid;
-    /* This creates 2 equal columns by default (Mobile View) */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    padding: 15px;
-    justify-items: center;
+ .songs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px; /* Adds consistent spacing between cards */
 }
 
 .card {
     background: #222;
-    padding: 10px; /* Reduced padding for mobile */
+    padding: 15px;
     border-radius: 12px;
-    width: 90%; /* Let the grid control the width */
-    max-width: 280px;
+    flex: 0 0 calc(50% - 10px); /* 2 per row on mobile: 50% width minus gap */
+    max-width: 280px; /* Prevents cards from growing too wide */
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     position: relative;
+    margin: 5px; /* Minimal margin fallback */
 }
 
-/* Adjust text size for mobile so 2 cards fit nicely */
-.card h3 {
-    margin: 10px 0;
-    font-size: 14px; 
+.card:hover {
+    transform: scale(1.05);
 }
 
-.card .btn {
-    font-size: 12px;
-    padding: 6px 10px;
-}
-
-/* ===== DESKTOP VIEW (Laptops/Screens wider than 768px) ===== */
+/* Tablet/Laptop: 3 per row (~768px+) */
 @media (min-width: 768px) {
-    .songs {
-        /* This changes the grid to 4 columns on larger screens */
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 25px;
-        padding: 40px;
-    }
-
     .card {
-        padding: 15px;
-        width: 280px;
-    }
-
-    .card h3 {
-        font-size: 18px;
+        flex: 0 0 calc(33.333% - 10px); /* 3 per row */
     }
 }
+
+/* Desktop: 4 per row (1024px+) */
+@media (min-width: 1024px) {
+    .card {
+        flex: 0 0 calc(25% - 10px); /* 4 per row */
+    }
+}
+
+/* Also adjust favorites section for consistency */
+#favoritesSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 15px 0 10px;
+        }
+
         .btn {
             display: inline-block;
             padding: 8px 15px;
@@ -498,6 +505,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
