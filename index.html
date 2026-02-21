@@ -115,8 +115,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
     gap: 15px; /* spacing between cards */
+    padding: 20px;
 }
 
 .card {
@@ -127,23 +127,21 @@
     transition: 0.3s;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     position: relative;
-    flex: 0 0 calc(50% - 15px); /* Default: 2 cards per row on small screens */
-    max-width: 280px; /* Prevents cards from growing too wide */
+    
+    /* Responsive width using flex */
+    flex: 1 1 45%;  /* default: ~2 per row */
+    min-width: 200px; /* prevents cards from getting too small */
 }
 
-/* Tablet: 3 cards per row */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) { /* Tablet */
     .card {
-        flex: 0 0 calc(33.333% - 15px);
-        max-width: none; /* allow to stretch */
+        flex: 1 1 30%; /* ~3 per row */
     }
 }
 
-/* Desktop / Laptop: 4 cards per row */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /* Desktop / Laptop */
     .card {
-        flex: 0 0 calc(25% - 15px);
-        max-width: none;
+        flex: 1 1 22%; /* ~4 per row */
     }
 }
 
@@ -504,6 +502,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
