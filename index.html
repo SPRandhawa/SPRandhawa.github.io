@@ -111,24 +111,44 @@
 }
 
         /* ===== SONG CARDS ===== */
-        .songs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
+      /* ===== SONG CARDS ===== */
+.songs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
 
-        .card {
-            background: #222;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 12px;
-            width: 280px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0,0,0,0.6);
-            position: relative;
-        }
+.card {
+    background: #222;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    position: relative;
+
+    /* Default for mobile: 2 cards per row */
+    flex: 1 1 calc(50% - 30px); /* 50% width minus margin */
+    max-width: calc(50% - 30px);
+}
+
+/* Desktop / Laptop: 4 cards per row */
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(25% - 30px); /* 25% width minus margin */
+        max-width: calc(25% - 30px);
+    }
+}
+
+/* Optional: Tablet (3 cards per row) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card {
+        flex: 1 1 calc(33.33% - 30px);
+        max-width: calc(33.33% - 30px);
+    }
+}
 
         .card:hover {
             transform: scale(1.05);
@@ -479,6 +499,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
