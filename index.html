@@ -111,42 +111,39 @@
 }
             /* ===== SONG CARDS ===== */
 
- .songs {
+.songs {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    gap: 15px; /* Adds consistent spacing between cards */
+    gap: 15px; /* spacing between cards */
 }
 
 .card {
     background: #222;
     padding: 15px;
     border-radius: 12px;
-    flex: 0 0 calc(50% - 10px); /* 2 per row on mobile: 50% width minus gap */
-    max-width: 280px; /* Prevents cards from growing too wide */
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 0 15px rgba(0,0,0,0.6);
     position: relative;
-    margin: 5px; /* Minimal margin fallback */
+    flex: 0 0 calc(50% - 15px); /* Default: 2 cards per row on small screens */
+    max-width: 280px; /* Prevents cards from growing too wide */
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-/* Tablet/Laptop: 3 per row (~768px+) */
-@media (min-width: 768px) {
+/* Tablet: 3 cards per row */
+@media (min-width: 600px) and (max-width: 1023px) {
     .card {
-        flex: 0 0 calc(33.333% - 10px); /* 3 per row */
+        flex: 0 0 calc(33.333% - 15px);
+        max-width: none; /* allow to stretch */
     }
 }
 
-/* Desktop: 4 per row (1024px+) */
+/* Desktop / Laptop: 4 cards per row */
 @media (min-width: 1024px) {
     .card {
-        flex: 0 0 calc(25% - 10px); /* 4 per row */
+        flex: 0 0 calc(25% - 15px);
+        max-width: none;
     }
 }
 
@@ -159,7 +156,9 @@
     gap: 15px;
 }
 
-
+  .card:hover {
+            transform: scale(1.05);
+        }
         .card img {
             width: 100%;
             border-radius: 10px;
@@ -505,6 +504,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
