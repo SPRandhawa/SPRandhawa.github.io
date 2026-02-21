@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <title>Randhawa Production | Punjabi Remix & DJ Music Official Website</title>
     <link rel="icon" type="image/png" href="fav.png">
     <link rel="canonical" href="https://sprandhawa.github.io/">
@@ -111,38 +111,57 @@
 }
 
         /* ===== SONG CARDS ===== */
-      .songs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
+     /* ===== SONG CARDS ===== */
+.songs {
+    display: grid;
+    /* This creates 2 equal columns by default (Mobile View) */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 15px;
+    justify-items: center;
+}
 
-        .card {
-            background: #222;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 12px;
-            width: 280px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0,0,0,0.6);
-            position: relative;
-        }
+.card {
+    background: #222;
+    padding: 10px; /* Reduced padding for mobile */
+    border-radius: 12px;
+    width: 90%; /* Let the grid control the width */
+    max-width: 280px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    position: relative;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+/* Adjust text size for mobile so 2 cards fit nicely */
+.card h3 {
+    margin: 10px 0;
+    font-size: 14px; 
+}
 
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+.card .btn {
+    font-size: 12px;
+    padding: 6px 10px;
+}
 
-        .card h3 {
-            margin: 15px 0 10px;
-        }
+/* ===== DESKTOP VIEW (Laptops/Screens wider than 768px) ===== */
+@media (min-width: 768px) {
+    .songs {
+        /* This changes the grid to 4 columns on larger screens */
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 25px;
+        padding: 40px;
+    }
 
+    .card {
+        padding: 15px;
+        width: 280px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+}
         .btn {
             display: inline-block;
             padding: 8px 15px;
@@ -479,6 +498,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
