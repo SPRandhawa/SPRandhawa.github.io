@@ -27,26 +27,36 @@
       
 .banner {
     width: 100%;
-    height: 410px;   /* change this to control visible size */
-    background-image: url("BANNER.jpeg"); /* PUT YOUR BANNER IMAGE */
+    height: auto; /* let height adjust */
+    aspect-ratio: 16/9; /* maintains proper width:height ratio */
+    background-image: url("BANNER.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
         /* ===== ROUND LOGO ===== */
-        .profile-logo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            overflow: hidden;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -80px;
-            border: 6px solid #111;
-            background: #000;
-        }
+   .profile-logo {
+    width: 120px; /* smaller on mobile */
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px; /* adjust relative to height */
+    border: 4px solid #111;
+    background: #000;
+}
+
+@media (min-width: 768px) {
+    .profile-logo {
+        width: 160px;
+        height: 160px;
+        bottom: -80px;
+        border: 6px solid #111;
+    }
+}
 
         .profile-logo img {
             width: 100%;
@@ -502,6 +512,7 @@ Welcome to my official music website — your ultimate destination for an immers
 </body>
 
 </html>
+
 
 
 
