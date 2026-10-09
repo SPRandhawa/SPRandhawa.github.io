@@ -250,6 +250,37 @@
         .social-icons img:hover {
             transform: scale(1.2);
         }
+     
+/* ===== SONG FILTER BUTTONS ===== */
+.song-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid red;
+    border-radius: 25px;
+    background: #222;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: red;
+    color: white;
+}
+
+.card.hidden {
+    display: none;
+}
     </style>
 </head>
 
@@ -284,6 +315,15 @@ Welcome to my official music website — your ultimate destination for an immers
 </h6>
 </section>
 
+
+<!-- ===== SONG FILTERS ===== -->
+<div class="song-filters">
+    <button class="filter-btn active" data-filter="all">All Songs</button>
+    <button class="filter-btn" data-filter="hindi">Hindi Songs</button>
+    <button class="filter-btn" data-filter="punjabi">Punjabi Songs</button>
+    <button class="filter-btn" data-filter="devotional">Devotional Songs</button>
+</div>
+ 
 <!-- ===== SONGS ===== -->
 <section class="songs">
 
@@ -296,7 +336,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
-  <div class="card" data-title="Ghostface Killah 🔥 (Original Song) |Sidhu Moose Wala">
+  <div class="card" data-category="punjabi" data-title="Ghostface Killah 🔥 (Original Song) |Sidhu Moose Wala">
         <span class="heart">❤</span>
         <img src="ghost.png" alt="Song Poster">
         <h3>Ghostface Killah 🔥 (Original Song) |Sidhu Moose Wala</h3>
@@ -314,7 +354,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
-   <div class="card" data-title="CHALLA SONG | Sidhu Moose Wala">
+   <div class="card" data-category="punjabi" data-title="CHALLA SONG | Sidhu Moose Wala">
         <span class="heart">❤</span>
         <img src="challa.png" alt="Song Poster">
         <h3>CHALLA SONG | Sidhu Moose Wala</h3>
@@ -323,7 +363,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
  
- <div class="card" data-title="Sohneyo Narazgi Te Nahi ( Official Song ) l Soni Pabla |Latest Punjabi Remix Song 2026">
+ <div class="card" data-category="punjabi" data-title="Sohneyo Narazgi Te Nahi ( Official Song ) l Soni Pabla |Latest Punjabi Remix Song 2026">
         <span class="heart">❤</span>
         <img src="te.png" alt="Song Poster">
         <h3>Sohneyo Narazgi Te Nahi ( Official Song ) l Soni Pabla |Latest Punjabi Remix Song 2026</h3>
@@ -332,7 +372,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
- <div class="card" data-title="Teri Ardaas (Office Song) | Sidhu Moose Wala | New Punjabi Song 2026">
+ <div class="card" data-category="punjabi" data-title="Teri Ardaas (Office Song) | Sidhu Moose Wala | New Punjabi Song 2026">
         <span class="heart">❤</span>
         <img src="arda.png" alt="Song Poster">
         <h3>Teri Ardaas (Office Song) | Sidhu Moose Wala | New Punjabi Song 2026</h3>
@@ -341,7 +381,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
- <div class="card" data-title="KILLE - SIDHU MOOSE WALA (OFFICIAL SONG) | Latest New Punjabi Songs 2026">
+ <div class="card" data-category="punjabi" data-title="KILLE - SIDHU MOOSE WALA (OFFICIAL SONG) | Latest New Punjabi Songs 2026">
         <span class="heart">❤</span>
         <img src="kille.png" alt="Song Poster">
         <h3>KILLE - SIDHU MOOSE WALA (OFFICIAL SONG) | Latest New Punjabi Songs 2026</h3>
@@ -350,7 +390,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
- <div class="card" data-title="Hauli Hauli 🔥 (Official Song) Sidhu Moosewala Song | Sunny Malton Latest Punjabi Songs 2026">
+ <div class="card" data-category="punjabi" data-title="Hauli Hauli 🔥 (Official Song) Sidhu Moosewala Song | Sunny Malton Latest Punjabi Songs 2026">
         <span class="heart">❤</span>
         <img src="hauli.png" alt="Song Poster">
         <h3>Hauli Hauli 🔥 (Official Song) Sidhu Moosewala Song | Sunny Malton Latest Punjabi Songs 2026</h3>
@@ -359,7 +399,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
-<div class="card" data-title="Aaja Soniya x IDK | Latest Punjabi Song 2026 (official).">
+<div class="card" data-category="punjabi" data-title="Aaja Soniya x IDK | Latest Punjabi Song 2026 (official).">
         <span class="heart">❤</span>
         <img src="so.png" alt="Song Poster">
         <h3>Aaja Soniya x IDK | Latest Punjabi Song 2026 (official).</h3>
@@ -368,7 +408,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
  
-<div class="card" data-title="SIDHU MOOSE WALA -SIGNED TO GOD (TEASER)">
+<div class="card" data-category="punjabi" data-title="SIDHU MOOSE WALA -SIGNED TO GOD (TEASER)">
         <span class="heart">❤</span>
         <img src="tea.png" alt="Song Poster">
         <h3>SIDHU MOOSE WALA -SIGNED TO GOD (TEASER)</h3>
@@ -537,7 +577,7 @@ Welcome to my official music website — your ultimate destination for an immers
             ▶ Watch on YouTube
         </a></div>
        
-    <div class="card" data-title="HAR HAR SHAMBHU (REMIX 2026)">
+    <div class="card" data-category="devotional" data-title="HAR HAR SHAMBHU (REMIX 2026)">
         <span class="heart">❤</span>
         <img src="har.png" alt="Song Poster">
         <h3>HAR HAR SHAMBHU (REMIX 2026)</h3>
@@ -720,7 +760,7 @@ Welcome to my official music website — your ultimate destination for an immers
         <a class="btn" href="https://youtu.be/iJLN3O07AuQ?si=r7z--FnYCBwXzzoA" target="_blank">
             ▶ Watch on YouTube
         </a></div>
- <div class="card" data-title="Vanjara SONG (REMIX 2026)">
+ <div class="card" data-category="punjabi" data-title="Vanjara SONG (REMIX 2026)">
         <span class="heart">❤</span>
         <img src="vanjara.png" alt="Song Poster">
         <h3>Vanjara SONG (REMIX 2026)</h3>
@@ -728,7 +768,7 @@ Welcome to my official music website — your ultimate destination for an immers
             ▶ Watch on YouTube
         </a>
     </div>
-<div class="card" data-title="PUNJAB-2 II Latest Punjabi Song 2026">
+<div class="card" data-category="punjabi" data-title="PUNJAB-2 II Latest Punjabi Song 2026">
         <span class="heart">❤</span>
         <img src="punj.png" alt="Song Poster">
         <h3>PUNJAB-2 II Latest Punjabi Song 2026</h3>
@@ -736,7 +776,7 @@ Welcome to my official music website — your ultimate destination for an immers
             ▶ Watch on YouTube
         </a>
     </div>
-    <div class="card" data-title="(KITHO CHANGA KAHANGA) Sidhu Moose Wala II Latest Punjabi Song 2026.">
+    <div class="card" data-category="punjabi" data-title="(KITHO CHANGA KAHANGA) Sidhu Moose Wala II Latest Punjabi Song 2026.">
         <span class="heart">❤</span>
         <img src="cir.png" alt="Song Poster">
         <h3>(KITHO CHANGA KAHANGA) Sidhu Moose Wala II Latest Punjabi Song 2026.</h3>
@@ -744,7 +784,7 @@ Welcome to my official music website — your ultimate destination for an immers
             ▶ Watch on YouTube
         </a>
     </div>
-    <div class="card" data-title="Sidhu Moose Wala (Mashup)">
+    <div class="card" data-category="punjabi" data-title="Sidhu Moose Wala (Mashup)">
         <span class="heart">❤</span>
         <img src="smw.png" alt="Song Poster">
         <h3>Sidhu Moose Wala (Mashup)</h3>
@@ -753,7 +793,7 @@ Welcome to my official music website — your ultimate destination for an immers
         </a>
     </div>
 
-     <div class="card" data-title="PB-X Kalli Song Sidhu Moose Wala II Latest punjabi song">
+     <div class="card" data-category="punjabi" data-title="PB-X Kalli Song Sidhu Moose Wala II Latest punjabi song">
         <span class="heart">❤</span>
         <img src="pb.png" alt="Song Poster">
         <h3>PB-X Kalli Song Sidhu Moose Wala II Latest punjabi song</h3>
@@ -834,6 +874,32 @@ Welcome to my official music website — your ultimate destination for an immers
     });
 
     renderFavorites();
+
+ const filterButtons = document.querySelectorAll(".filter-btn");
+    const songCards = document.querySelectorAll(".songs .card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const category = this.dataset.filter;
+
+            // Update active button
+            filterButtons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+            this.classList.add("active");
+
+            // Filter songs
+            songCards.forEach(card => {
+                const songCategory = card.dataset.category;
+
+                if (category === "all" || songCategory === category) {
+                    card.classList.remove("hidden");
+                } else {
+                    card.classList.add("hidden");
+                }
+            });
+        });
+    });
 </script>
 
 </body>
